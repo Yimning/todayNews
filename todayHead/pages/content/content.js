@@ -35,7 +35,11 @@ Page({
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     console.log(options.contenturl);
+<<<<<<< HEAD
+    var url = "https://mini.eastday.com/"+options.contenturl+".html";
+=======
     var url = "http://mini.eastday.com/"+options.contenturl+".html";
+>>>>>>> 7712b79699421c1327ab73beefeb177e35a260b5
     const that = this;
     const sepration = "-----"
     wx.request({
