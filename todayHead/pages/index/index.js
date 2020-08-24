@@ -5,7 +5,7 @@ Page({
   data: {
      dataArr:[],
   },
-    //获取到图片的个数
+    //获取到图片的个数  并显示到页面  有多少张就显示多少
   imageCount: function(obj) {
       if ("thumbnail_pic_s03" in obj) {
         return [obj.thumbnail_pic_s,obj.thumbnail_pic_s02,obj.thumbnail_pic_s03];  
@@ -60,6 +60,7 @@ Page({
                var obj = dataArrs[i];
                obj.countArrs = that.imageCount(obj);
                obj.httpurl = that.geturlPath(obj.url);
+               console.log(obj.httpurl);
                if (that.array_contain(obj)) {continue};
               that.globalData.tempArrs.push(obj);
           }
